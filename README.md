@@ -1,6 +1,8 @@
 # Fulfilment Centre Simulation: Finding and Fixing the Bottleneck
 
-A discrete-event simulation of an e-commerce order fulfilment line (**Pick → Pack → Sort/Ship**) built with Python and SimPy. It finds the bottleneck, tests six improvement scenarios over **30 simulated shifts each** with 95% confidence intervals, stress-tests them at **+20% peak demand**, and is validated against queueing theory with 17 automated tests.
+A discrete-event simulation of an e-commerce order fulfilment line (**Pick → Pack → Sort/Ship**) built with Python and SimPy, using **illustrative (assumed) parameters, not company data**. It finds the bottleneck, tests six improvement scenarios over **30 simulated shifts each** with 95% confidence intervals, stress-tests them at **+20% peak demand**, and is validated against queueing theory with 17 automated tests.
+
+**In plain terms:** the pack station runs at 94% of its capacity, so small delays turn into long queues. In this model a 25% cut in pack setup time (an assumption: pre-built cartons) cuts the average order time by 41% with the same 11 staff. On a +20% peak day one extra packer is still needed.
 
 ![Cycle time by scenario](outputs/charts/01_cycle_time.png)
 
